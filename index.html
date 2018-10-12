@@ -1,0 +1,215 @@
+<html>
+<head>
+	<title>Font Changer for Non unicode to Unicode</title>
+  <link rel='icon' href='./img/favicon.png' type='image/x-icon' />
+	<meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="nightfury.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=mon3' />
+  <link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=zawgyi' />
+  <script language="JavaScript" src="./nightfury___update___font/mon2uni51.js"></script>
+  <script language="JavaScript" src="./nightfury___update___font/uni512mon.js"></script>
+  <script type="text/javascript">
+      function clearText() {
+        document.getElementById("unicode").value = "";
+        document.getElementById("zawgyi").value = ""
+      }
+      function Convert()
+
+{
+var type=document.getElementById("Select1").value;
+var input=document.getElementById("TextArea1").value;
+var result;
+result=input;
+   switch (type)
+   {      
+   case "uni" :
+    document.getElementById("TextArea1").style.fontFamily="'MON3Anonta3', TharLon,  MON3Anonta2, MON3Anonta1, MON2Anonta1, MON2Anonta2, Padauk, myanmar3";
+      result = Mon_Uni(input);
+        break;  
+   case "mon" :
+        document.getElementById("TextArea1").style.fontFamily="Mon";
+        result = Uni_Mon(input);
+        break;         
+   default :
+        break;
+   }
+
+
+document.getElementById("TextArea1").value=result;
+
+}
+  </script>
+<style>
+@font-face {  
+  font-family: "TharLon";  
+  src: url(./fonts/TharLon.eot); /* IE */  
+  src: url('./fonts/TharLon.ttf') ; /* non-IE */
+  unicode-range: U+1000-1060;
+}  
+    @font-face {  
+  font-family: "Padauk";  
+  src: url(./fonts/Padauk.eot); /* IE */  
+  src: url('./fonts/Padauk.ttf') ; /* non-IE */
+  unicode-range: U+1000-1060;
+}  
+    @font-face {  
+  font-family: "MON2Anonta1";  
+  src: url(./fonts/mm2anonta_1_2012.eot); /* IE */  
+  src: url('./fonts/mm2anonta_1_2012.ttf'); /* non-IE */
+  unicode-range: U+1000-1060;
+}  
+
+    @font-face {  
+  font-family: "MON2Anonta2";  
+  src: url(./fonts/mm2anonta_2_2012.eot); /* IE */  
+  src: url('./fonts/mm2anonta_2_2012.ttf') ; /* non-IE */
+  unicode-range: U+1000-1060;
+}  
+
+    @font-face {  
+  font-family: "MON3Anonta1";  
+  src: url(./fonts/mm3anonta_1_2012.eot); /* IE */  
+  src: url('./fonts/mm3anonta_1_2012.ttf') ; /* non-IE */
+  unicode-range: U+1000-1060;
+}  
+
+    @font-face {  
+  font-family: "MON3Anonta2";  
+  src: url('./fonts/mm3anonta_2_2012.eot'); /* IE */  
+  src: url('./fonts/mm3anonta_2_2012.ttf'); /* non-IE */
+  unicode-range: U+1000-1060;
+}  
+
+    @font-face {  
+  font-family: "MON3Anonta3";  
+  src: url('./fonts/mm3anonta_3_2012.eot'); /* IE */  
+  src: url('./fonts/mm3anonta_3_2012.ttf'); /* non-IE */
+  unicode-range: U+1000-1060;
+}  
+   @font-face {  
+  font-family: "myanmar3";  
+  src: url('./fonts/myanmar3.eot'); /* IE */  
+  src: url('./fonts/myanmar3.ttf'); /* non-IE */
+  unicode-range: U+1000-1060;
+}  
+
+   @font-face {  
+  font-family: "Mon";  
+  src: url('./fonts/Mon.eot'); /* IE */  
+  src: url('./fonts/Mon.ttf'); /* non-IE */
+}
+</style>  
+</head>
+<body>
+<div id="container">
+	<header>
+		<!-- <img src="bnh.png"> -->
+		<!-- <h2>Night Fury Text Exchange</h2> -->
+    <div class="foo">
+      <span class="letter" data-letter="F">F</span>
+      <span class="letter" data-letter="O">O</span>
+      <span class="letter" data-letter="N">N</span>
+      <span class="letter" data-letter="T">T</span>
+      <span class="letter" data-letter="C">C</span>
+      <span class="letter" data-letter="H">H</span>
+      <span class="letter" data-letter="A">A</span>
+      <span class="letter" data-letter="N">N</span>
+      <span class="letter" data-letter="G">G</span>
+      <span class="letter" data-letter="R">R</span>
+    </div>
+	</header>
+  <div class="row">
+    <div class="col-xl-6 col-md-6 col-sm-12 col-xs-12">
+      <div id="textContainer">
+         <h2 class="title"> Myanmar Unicode < > Zawgyi-One</h2>
+         <section id="Unicode">
+              <h3>ယူနီကုတ် ပုံစံ</h3>
+              <textarea id="unicode" onfocus="handleOnFocus(this)" onblur="handleOnBlur()" placeholder="Describe text here..."></textarea>
+          </section>
+          
+          <section id="Zawgyi">
+              <h3>ေဇာ္ဂ်ီေဖာင့္ ပံုစံ</h3>
+              <textarea id="zawgyi" onfocus="handleOnFocus(this)" onblur="handleOnBlur()" placeholder="Describe text here..."></textarea>
+          </section>
+          <section>
+            <br><input type="button" value="Reset Text" onclick="clearText()">
+          </section>
+      </div>
+    </div>
+    <div class="col-xl-6 col-md-6 col-sm-12 col-xs-12">
+      <div id="textContainer">
+        <h2 class="title"> Mon Non Unicode < > Unicode</h2>
+        <h3 style="font-family:'MON3 Anonta 1';">ဒၞာဲရုဲလိက်ယူနဳကုတ်/ယူနဳကုတ်ဟွံသေၚ်
+</h3><br>
+        <select id="Select1" name="D1" onchange="Convert()" style="color: #000000; font-family: 'MON3 Anonta 1';">
+            <!-- <option selected="">Select Encoding</option> -->                   
+              <option value="mon">စုတ်ယူနဳကုတ်ဟွံသေၚ်</option>        
+              <option value="uni">စုတ်ယူနဳကုတ် </option>
+            </select>
+            <textarea id="TextArea1" name="S1" style="color: rgb(91, 6, 6); width: 1280px; height: 312px; font-family: 'Mon', 'MON3Anonta3', TharLon, MON3Anonta2, MON3Anonta1, MON2Anonta1, MON2Anonta2, Padauk, myanmar3;">မၛႝဳရအဵ... မန္(မြန္)ယူန႘ကုတ္ <-ေကုာံ-> ယူန႘ကုတ္ဟြံေသင္တံေလဝ္ ဂြံၿပံင္သၜာဲအကၡဝ္မာန္ေဟင္ရ။      </textarea>
+      </div>
+    </div>
+  </div>
+	<footer>
+		Found a bug ? Please , Create <a href="https://github.com/banyerhan/unicode-nonunicode/issues" target="_blank">new issues</a><br>
+    <small>Coveraged by <a href="https://nightfury.info" target="_blank">Night Fury</a></small>
+	</footer>
+</div>
+
+<script>
+
+
+var textFieldInFocus;
+function handleOnFocus(form_element)
+{
+   textFieldInFocus = form_element;
+}
+function handleOnBlur()
+{
+   textFieldInFocus = null;
+}
+
+var unicode = document.getElementById("unicode");
+var zawgyi = document.getElementById("zawgyi");
+
+onchangeHandler(unicode,zawgyi,"uni2zg");
+onchangeHandler(zawgyi,unicode,"zg2uni");
+
+function converter(textField,tochangeField,toconv) {
+    if(tochangeField != textFieldInFocus) {
+        if(toconv == "uni2zg") {
+              tochangeField.value = nightfury.uni2zg(textField.value);
+        }
+        else {
+             tochangeField.value = nightfury.zg2uni(textField.value);
+        }
+    }
+}
+
+function onchangeHandler(textField,tochangeField,toconv) {
+    
+    if (textField.addEventListener) {
+      textField.addEventListener('input', function() {
+          converter(textField,tochangeField,toconv);
+      }, false);
+    } else if (textField.attachEvent) {
+      textField.attachEvent('onpropertychange', function() {
+        // IE
+          converter(textField,tochangeField,toconv);
+      });
+    }
+    
+}
+
+
+
+</script>
+</body>
+</html>
